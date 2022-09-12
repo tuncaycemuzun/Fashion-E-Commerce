@@ -19,7 +19,14 @@ const App = () => {
         backgroundColor={Colors.black}
       />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator
+          screenOptions=
+          {{
+            statusBarAnimation: 'slide',
+            customAnimationOnGesture : true,
+            animationTypeForReplace: 'push',
+            animation: 'slide_from_right'
+          }} initialRouteName='Login'>
 
           <Stack.Screen
             options={
