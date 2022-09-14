@@ -18,7 +18,7 @@ const Login = ({ navigation }: DefaultPageType) => {
 
     const SignInClick = () => {
         console.log("SignIn Clicked");
-        navigation.navigate("Home");
+        navigation.navigate("SplashScreen");
     }
     
     const SingInFacebookClick = () => {

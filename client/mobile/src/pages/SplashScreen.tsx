@@ -45,7 +45,7 @@ const Home = ({ navigation }: DefaultPageType) => {
         
         if(loading == 100){
             clearTimeout(timeout);
-            navigation.navigate("Home");
+            navigation.navigate("Default");
         }
     }, [loading]);
 

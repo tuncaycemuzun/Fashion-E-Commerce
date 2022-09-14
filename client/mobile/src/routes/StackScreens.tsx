@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SplashScreen, Login, Register , Home} from '../pages';
-
+import BottomNavigator from './BottomNavigator';
 const Stack = createNativeStackNavigator();
 
 const StackScreens = () => {
@@ -49,8 +49,8 @@ const StackScreens = () => {
                         headerShown: false
                     }
                 }
-                name="Home"
-                component={Home} />
+                name="Default"
+                component={BottomNavigator} />
         </Stack.Navigator>
     );
 }
