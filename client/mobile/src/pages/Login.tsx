@@ -18,6 +18,7 @@ const Login = ({ navigation }: DefaultPageType) => {
 
     const SignInClick = () => {
         console.log("SignIn Clicked");
+        navigation.navigate("Home");
     }
     
     const SingInFacebookClick = () => {

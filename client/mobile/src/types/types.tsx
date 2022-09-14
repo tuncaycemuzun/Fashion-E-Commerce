@@ -5,3 +5,10 @@ export type NavigationType = {
 export type DefaultPageType = {
     navigation: NavigationType;
 };
+
+export type CircleType = {
+    size: number,
+    color: string,
+    left: number,
+    top: number
+}

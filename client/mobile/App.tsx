@@ -4,13 +4,10 @@ import {
   StyleSheet
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Login from './src/pages/Login';
-import Register from './src/pages/Register';
+import StackScreens from './src/routes/StackScreens';
 
-const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <SafeAreaProvider style={styles.appBg}>
@@ -19,34 +16,7 @@ const App = () => {
         backgroundColor={Colors.black}
       />
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions=
-          {{
-            statusBarAnimation: 'slide',
-            customAnimationOnGesture : true,
-            animationTypeForReplace: 'push',
-            animation: 'slide_from_right'
-          }} initialRouteName='Login'>
-
-          <Stack.Screen
-            options={
-              {
-                headerShown: false
-              }
-            }
-            name="Login"
-            component={Login} />
-
-          <Stack.Screen
-            options={
-              {
-                headerShown: false
-              }
-            }
-            name="Register"
-            component={Register} />
-
-        </Stack.Navigator>
+        <StackScreens />
       </NavigationContainer>
     </SafeAreaProvider>
   );
