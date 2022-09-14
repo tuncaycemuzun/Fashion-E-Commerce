@@ -3,7 +3,6 @@ import { Home, Favorites, Categories, MyOrders, Profile } from '../pages';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { colors } from '../constants/colors';
-import { View } from 'react-native';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -13,12 +12,10 @@ const BottomNavigator = () => {
         <Tab.Navigator initialRouteName='Home'
             activeColor={colors.red}
             inactiveColor={'gray'}
-            backBehavior='initialRoute'
             barStyle={{ backgroundColor: 'white' }}
             keyboardHidesNavigationBar={true}
             sceneAnimationEnabled={true}
-            labeled={true}
-            shifting={true}
+           
 
         >
             <Tab.Screen
