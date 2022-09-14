@@ -16,31 +16,26 @@ import IconBrand from 'react-native-vector-icons/FontAwesome5';
 const Login = ({ navigation }: DefaultPageType) => {
     const [showPassword, setShowPassword] = useState(true)
 
-    const SignUpClick = () => {
-        console.log("SignUp Clicked");
+    const SignInClick = () => {
+        console.log("SignIn Clicked");
     }
-
-    const SingUpFacebookClick = () => {
+    
+    const SingInFacebookClick = () => {
         console.log("SignUp Facebook Clicked");
     }
 
-    const SignInClick = () =>{
+    const SignUpClick = () =>{
         navigation.navigate('Register');
     }
 
     return (
         <ScrollView style={styles.main}>
             <View style={styles.header}>
-                <Text style={styles.headerPrimary}>Sign Up</Text>
-                <Text style={styles.headerSecondary}>Create an account</Text>
+                <Text style={styles.headerPrimary}>Login</Text>
             </View>
             <View style={styles.form}>
                 <TextInput style={styles.formInput}
                     placeholder="Mobile Number or Email"
-                    placeholderTextColor={colors.gray}>
-                </TextInput>
-                <TextInput style={styles.formInput}
-                    placeholder="Full Name"
                     placeholderTextColor={colors.gray}>
                 </TextInput>
                 <View style={styles.passInput}>
@@ -58,16 +53,12 @@ const Login = ({ navigation }: DefaultPageType) => {
                 </View>
 
             </View>
-            <Text>
-                By continuing, you confirm that you have read and agreed to
-                our <Text style={styles.highlight}>Terms and Conditions</Text> and <Text style={styles.highlight}>Privacy Policy</Text>.
-            </Text>
             <Line color={colors.gray} />
             <View style={styles.buttonGroup}>
                 <Button
                     bgColor={colors.red}
-                    onPress={() => SignUpClick()}
-                    text='Sign Up'
+                    onPress={() => SignInClick()}
+                    text='Sign In'
                     textColor={colors.white}
                 ></Button>
                 <View style={{ width: '100%', position: 'relative' }}>
@@ -79,8 +70,8 @@ const Login = ({ navigation }: DefaultPageType) => {
                     />
                     <Button
                         bgColor={colors.white}
-                        onPress={() => SingUpFacebookClick()}
-                        text='Sign Up With Facebook'
+                        onPress={() => SingInFacebookClick()}
+                        text='Sign In With Facebook'
                         textColor={colors.black}
                     ></Button>
                 </View>
@@ -90,9 +81,9 @@ const Login = ({ navigation }: DefaultPageType) => {
             </View>
             <View style={styles.info}>
                 <Text>
-                    Already have an account?
+                    Don't have an account?
                 </Text>
-                <Text onPress={() =>SignInClick()} style={styles.signInHighlight}>Sign In</Text>
+                <Text onPress={() =>SignUpClick()} style={styles.signInHighlight}>Sign Up Now</Text>
             </View>
 
 
@@ -128,7 +119,7 @@ const styles = StyleSheet.create({
     form: {
         flex: 1,
         justifyContent: 'space-between',
-        height: 200,
+        height: 130,
         marginBottom: 30
     },
     formInput: {
